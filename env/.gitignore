@@ -4,3 +4,9 @@ __pycache__/
 venv/
 *.pkl
 *.sqlite3
+# Large data files
+final_internship_data.csv
+*.pkl
+*.h5
+*.zip
+*.rar
