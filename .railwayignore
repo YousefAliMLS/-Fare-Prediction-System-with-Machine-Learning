@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+venv/
+*.pkl
+*.sqlite3
+*.h5
+*.zip
+*.rar
+*.csv
+final_internship_data.csv
+*final_internship_data.csv
+*.csv
+media/
