@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fare Prediction</title>
+</head>
+<body>
+    <h2>Enter Trip Details:</h2>
+    <form method="post">
+        {% csrf_token %}
+        Pickup Longitude: <input type="text" name="pickup_longitude"><br>
+        Pickup Latitude: <input type="text" name="pickup_latitude"><br>
+        Dropoff Longitude: <input type="text" name="dropoff_longitude"><br>
+        Dropoff Latitude: <input type="text" name="dropoff_latitude"><br>
+        Passenger Count: <input type="number" name="passenger_count"><br>
+        Hour: <input type="number" name="hour"><br>
+        Day: <input type="number" name="day"><br>
+        Month: <input type="number" name="month"><br>
+        Weekday: <input type="number" name="weekday"><br>
+        Year: <input type="number" name="year"><br>
+        Distance: <input type="text" name="distance"><br>
+        Bearing: <input type="text" name="bearing"><br>
+        Is Weekend (0/1): <input type="number" name="is_weekend"><br>
+        Rush Hours (0/1): <input type="number" name="rsuh_hours"><br>
+        <!-- Add other one-hot fields as needed -->
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+    <h3>Predicted Fare: ${{ result }}</h3>
+    {% endif %}
+    {% if error %}
+    <p style="color:red;">Error: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
